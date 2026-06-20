@@ -1,0 +1,161 @@
+row_index,user_id,claim_object,user_claim,num_images_loaded,missing_image_paths,image_load_errors,gt_issue_type,gt_object_part,gt_claim_status,gt_severity,raw_response,api_error,status,pred_issue_type,correct_issue_type,pred_object_part,correct_object_part,pred_claim_status,correct_claim_status,pred_severity,correct_severity
+0,user_001,car,"Customer: Hi, I found new damage on my car after it was parked outside overnight. | Support: Sorry to hear that. Can you describe what changed? | Customer: The back of the car has a dent now. It was not there before. | Support: Did anything else break or is it mostly body damage? | Customer: Mostly the rear bumper area. I attached the photo I took this morning.",1,,,dent,rear_bumper,supported,medium,"```json
+{
+  ""issue_type"": ""broken_part"",
+  ""object_part"": ""rear_bumper"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,broken_part,False,rear_bumper,True,supported,True,high,False
+1,user_002,car,"Customer: Parking lot mein meri car ko scrape lag gaya. | Support: Aap kis type ka damage report karna chahte hain? | Customer: Front side par mark aa gaya hai, bumper ke upar. | Support: Light damage hai ya body par scratch? | Customer: Light theek hai, front bumper par scratch hai. Photos upload kar diye hain.",2,,,broken_part,front_bumper,not_enough_information,unknown,"```json
+{
+  ""issue_type"": ""broken_part"",
+  ""object_part"": ""front_bumper"",
+  ""claim_status"": ""contradicted"",
+  ""severity"": ""high""
+}
+```",,ok,broken_part,True,front_bumper,True,contradicted,False,high,False
+2,user_004,car,"Customer: I am opening a claim for my windshield. | Support: What happened? | Customer: A small stone hit it while I was driving and now there is a crack spreading from that spot. | Support: Is the car otherwise okay? | Customer: Yes, this is only about the front glass. I added the pictures I have.",2,,,crack,windshield,supported,medium,"```json
+{
+  ""issue_type"": ""unknown"",
+  ""object_part"": ""windshield"",
+  ""claim_status"": ""not_enough_information"",
+  ""severity"": ""unknown""
+}
+```",,ok,unknown,False,windshield,True,not_enough_information,False,unknown,False
+3,user_007,car,"Customer: Someone clipped my car while it was parked. | Support: What part was hit? | Customer: The side mirror got damaged. It is not sitting the way it should anymore. | Support: Was there any damage to the door too? | Customer: I did not notice anything else major, just the mirror.",1,,,broken_part,side_mirror,supported,medium,"```json
+{
+  ""issue_type"": ""broken_part"",
+  ""object_part"": ""side_mirror"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,broken_part,True,side_mirror,True,supported,True,high,False
+4,user_005,car,"Customer: I want to file this as bumper damage. | Support: Can you tell me what happened? | Customer: The car was tapped from behind and now the back looks damaged. | Support: Are you asking for review of the rear side? | Customer: Yes, the back bumper. It looks pretty bad to me, so I uploaded both photos.",2,,,scratch,rear_bumper,contradicted,low,"```json
+{
+  ""issue_type"": ""dent"",
+  ""object_part"": ""quarter_panel"",
+  ""claim_status"": ""contradicted"",
+  ""severity"": ""high""
+}
+```",,ok,dent,False,quarter_panel,False,contradicted,True,high,False
+5,user_006,car,"Customer: Hi, I am not fully sure how to explain this because I noticed it only after reaching home. | Support: No problem, please tell me what happened. | Customer: There was a small bump earlier, nothing major, and I first thought everything was fine. Later I looked at the car again because my family member said the front area looked different. | Support: Are you reporting a general vehicle issue or a specific damaged part? | Customer: I was confused at first because I checked the side and the front and walked around the car a few times. I do not want to claim the wrong thing. | Support: That is okay. What part do you want reviewed? | Customer: After checking again, I think the issue is with the headlight. It looks like the headlight may be cracked, so please review that part.",1,,,unknown,headlight,not_enough_information,unknown,"```json
+{
+  ""issue_type"": ""unknown"",
+  ""object_part"": ""headlight"",
+  ""claim_status"": ""not_enough_information"",
+  ""severity"": ""unknown""
+}
+```",,ok,unknown,True,headlight,True,not_enough_information,True,unknown,True
+6,user_003,car,"Customer: There is a dent along the side of my car. | Support: When did you notice it? | Customer: This morning, after the car had been parked near the gate. | Support: Is it near the front or back? | Customer: It is on the door panel area. I attached two photos from different distances.",2,,,dent,door,supported,medium,"```json
+{
+  ""issue_type"": ""dent"",
+  ""object_part"": ""door"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""medium""
+}
+```",,ok,dent,True,door,True,supported,True,medium,True
+7,user_008,car,"Customer: I picked up my car after service and noticed a mark on the hood. | Support: What kind of mark is it? | Customer: It looks like a scratch across the top panel. | Support: Do you think it happened during service? | Customer: Yes, that is why I am asking for review. The photo is attached.",1,,,broken_part,front_bumper,contradicted,high,"```json
+{
+  ""issue_type"": ""dent"",
+  ""object_part"": ""hood"",
+  ""claim_status"": ""contradicted"",
+  ""severity"": ""high""
+}
+```",,ok,dent,False,hood,False,contradicted,True,high,True
+8,user_009,laptop,"Customer: My laptop fell from the table yesterday. | Support: Is it turning on? | Customer: It turns on, but the display glass has a crack now. | Support: Are you reporting the screen only or the whole laptop? | Customer: The screen is the issue. I attached a photo of it open.",1,,,crack,screen,supported,medium,"```json
+{
+  ""issue_type"": ""glass_shatter"",
+  ""object_part"": ""screen"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,glass_shatter,False,screen,True,supported,True,high,False
+9,user_010,laptop,"Customer: The laptop no longer opens smoothly. | Support: What seems to be wrong mechanically? | Customer: The hinge area has broken and the screen wobbles. | Support: Did this happen after a drop? | Customer: Yes, it slipped from the sofa. I uploaded photos from the outside and side.",2,,,broken_part,hinge,supported,medium,"```json
+{
+  ""issue_type"": ""unknown"",
+  ""object_part"": ""unknown"",
+  ""claim_status"": ""not_enough_information"",
+  ""severity"": ""unknown""
+}
+```",,ok,unknown,False,unknown,False,not_enough_information,False,unknown,False
+10,user_011,laptop,"Customer: I spilled water near my laptop while working. | Support: What part was affected? | Customer: It went over the keys and left a stain. Some keys feel sticky now. | Support: Is the display damaged too? | Customer: No, this is about the keyboard area only.",1,,,stain,keyboard,supported,medium,"```json
+{
+  ""issue_type"": ""water_damage"",
+  ""object_part"": ""keyboard"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,water_damage,False,keyboard,True,supported,True,high,False
+11,user_012,laptop,"Customer: My laptop bag fell from a chair and hit the floor. | Support: What damage did you notice? | Customer: One corner of the laptop has a dent now. | Support: Does the laptop still work? | Customer: It works, but the outer corner is damaged. I added two photos.",2,,,dent,corner,supported,low,"```json
+{
+  ""issue_type"": ""dent"",
+  ""object_part"": ""corner"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""low""
+}
+```",,ok,dent,True,corner,True,supported,True,low,True
+12,user_018,laptop,"Customer: I am not sure if this should be a repair claim or a replacement claim, so I wanted to ask first. | Support: We can help. What device is this about? | Customer: It is my laptop. I carry it every day, and yesterday my bag got pressed between two seats during travel. At first I thought the laptop was okay because it still opened. | Support: What changed after that? | Customer: Later, while using it, I noticed marks on the display area. I restarted it twice because I thought it might just be something on the screen, but it still bothered me. | Support: Are you reporting keyboard, hinge, body, or screen damage? | Customer: Not the keyboard or hinge. The issue I want checked is the screen. It looks shattered to me, so I am submitting this as screen damage.",1,,,crack,screen,supported,medium,"```json
+{
+  ""issue_type"": ""glass_shatter"",
+  ""object_part"": ""screen"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,glass_shatter,False,screen,True,supported,True,high,False
+13,user_020,laptop,Customer: The laptop trackpad has stopped working properly. | Support: Did anything happen before it stopped working? | Customer: The front area hit the desk edge when I moved it. | Support: Are you reporting internal function or physical damage? | Customer: Physical damage around the trackpad area. I attached the photo for review.,1,,,none,trackpad,contradicted,none,"```json
+{
+  ""issue_type"": ""scratch"",
+  ""object_part"": ""trackpad"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""low""
+}
+```",,ok,scratch,False,trackpad,True,supported,False,low,False
+14,user_015,package,Customer: My delivery box arrived damaged. | Support: What part of the package was affected? | Customer: One corner was crushed in when I received it. | Support: Is the item inside part of this claim? | Customer: Not right now. I am reporting the package corner damage.,1,,,crushed_packaging,package_corner,supported,medium,"```json
+{
+  ""issue_type"": ""crushed_packaging"",
+  ""object_part"": ""package_corner"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,crushed_packaging,True,package_corner,True,supported,True,high,False
+15,user_030,package,"Customer: Package receive hua toh opened jaisa lag raha tha. | Support: Tape broken tha ya box crush hua tha? | Customer: Seal wali side phati hui thi, jaise parcel khola gaya ho. | Support: Kya andar ka item missing hai? | Customer: Abhi item missing claim nahi kar raha, sirf torn packaging review karwana hai.",2,,,torn_packaging,seal,supported,medium,"```json
+{
+  ""issue_type"": ""torn_packaging"",
+  ""object_part"": ""seal"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,torn_packaging,True,seal,True,supported,True,high,False
+16,user_031,package,"Customer: I received a package that looks water damaged. | Support: Was the item inside wet too? | Customer: I have not opened everything yet, but the outside has a wet-looking stain. | Support: So the claim is about the package condition? | Customer: Yes, the package surface looked damaged when it arrived.",1,,,water_damage,package_side,supported,medium,"```json
+{
+  ""issue_type"": ""water_damage"",
+  ""object_part"": ""package_side"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,water_damage,True,package_side,True,supported,True,high,False
+17,user_032,package,Customer: The item I ordered was not inside the box. | Support: Did the package look opened when you received it? | Customer: I checked it after delivery and could not find the product inside. | Support: What are you asking us to verify? | Customer: Please verify that the contents are missing from the package.,2,,,unknown,contents,not_enough_information,unknown,"```json
+{
+  ""issue_type"": ""missing_part"",
+  ""object_part"": ""contents"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,missing_part,False,contents,True,supported,False,high,False
+18,user_033,package,Customer: The shipping box arrived in bad condition. | Support: What kind of condition issue are you reporting? | Customer: It looked badly crushed when it was delivered. | Support: Is the claim about the outside box or the product inside? | Customer: The outside box. I want the crushed box reviewed.,1,,,unknown,unknown,contradicted,low,"```json
+{
+  ""issue_type"": ""dent"",
+  ""object_part"": ""item"",
+  ""claim_status"": ""contradicted"",
+  ""severity"": ""high""
+}
+```",,ok,dent,False,item,False,contradicted,True,high,False
+19,user_034,package,Customer: My delivery box arrived opened. | Support: Was the package crushed or was the seal affected? | Customer: The seal area looked torn when I received it. | Support: Are you asking us to review the package condition or the item inside? | Customer: The package condition. I want the torn-open package reviewed.,2,,,none,seal,contradicted,none,"```json
+{
+  ""issue_type"": ""torn_packaging"",
+  ""object_part"": ""seal"",
+  ""claim_status"": ""supported"",
+  ""severity"": ""high""
+}
+```",,ok,torn_packaging,False,seal,True,supported,False,high,False
